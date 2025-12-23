@@ -1,0 +1,68 @@
+.skills-input-container {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.skill-input {
+    flex: 1;
+    padding: var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.skill-input:focus {
+    border-color: var(--primary);
+}
+
+.btn-add-skill {
+    background: var(--primary);
+    color: white;
+    width: 42px;
+    /* Square-ish */
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition-fast);
+}
+
+.btn-add-skill:hover {
+    background: var(--primary-hover);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.skill-tag {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.skill-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.skill-remove:hover {
+    background: #fee2e2;
+    color: var(--error);
+}

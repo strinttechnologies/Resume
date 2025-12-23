@@ -1,0 +1,18 @@
+.preview-container {
+    /* This container acts as the viewport for the A4 page */
+    transform-origin: top center;
+    transition: transform 0.2s ease;
+}
+
+/* For better screen fitting, we can add media queries to scale down the A4 page */
+@media (max-width: 1000px) {
+    .preview-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 800px) {
+    .preview-container {
+        transform: scale(0.6);
+    }
+}

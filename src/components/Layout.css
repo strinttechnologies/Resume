@@ -1,0 +1,53 @@
+.app-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.editor-pane {
+    flex: 1;
+    max-width: 500px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    background-color: var(--surface);
+    padding: var(--space-6);
+    z-index: 10;
+    box-shadow: var(--shadow-md);
+}
+
+.preview-pane {
+    flex: 1.5;
+    background-color: var(--surface-raised);
+    overflow-y: auto;
+    padding: var(--space-8);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .editor-pane,
+    .preview-pane {
+        flex: 1;
+        max-width: 100%;
+        border-right: none;
+    }
+
+    .preview-pane {
+        display: none;
+        /* In mobile we might use tabs */
+    }
+}
